@@ -4,7 +4,8 @@
 
 
 import os
-import sys 
+import sys
+
 import pandas as pd 
 import numpy as np
 from sklearn.metrics import mean_squared_error , mean_absolute_error,r2_score
@@ -59,11 +60,30 @@ def train_and_evaluate(config_path):
 
     accuracy  = evaluate(test_y,predicted_qualities)
 
+    scores_file = config["reports"]["scores"]
+    params_file = config["reports"]["params"]
+
+    with open(scores_file,"w")  as f:
+        scores = {
+            "accuracy" :accuracy
+        }
+        json.dump(scores,f,indent=4)
+
+    with open(params_file,"w")  as f:
+        params = {
+            "l1_ratio" :l1_ratio
+        }
+        json.dump(params,f,indent=4)
+    
+
     print("Accuracy_score = ",accuracy)
 
     os.makedirs(model_dir,exist_ok=True)
     model_path = os.path.join(model_dir,"models.joblib")
     joblib.dump(lr,model_path)
+
+
+
     
 
 if __name__ == "__main__":

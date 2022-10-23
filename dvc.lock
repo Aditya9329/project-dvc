@@ -7,8 +7,8 @@ stages:
       md5: 2daeecee174368f8a33b82c8cccae3a5
       size: 84199
     - path: src/get_data.py
-      md5: 68280ef9caf2bd8b4e4dd77ddad5d842
-      size: 729
+      md5: 2b773bb5e06e83bf4bce5c9a81bc4a7c
+      size: 731
     - path: src/load_data.py
       md5: 6012828c22dda06c209dd35f576640f1
       size: 712
@@ -32,3 +32,28 @@ stages:
     - path: data/processed/train_winequality-red.csv
       md5: 0805ce60268e424c0993dce54e4d1534
       size: 74914
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_winequality-red.csv
+      md5: ed8953e5126e27b36cce9517c30b0790
+      size: 18832
+    - path: data/processed/train_winequality-red.csv
+      md5: 0805ce60268e424c0993dce54e4d1534
+      size: 74914
+    - path: src/train_and_evaluate.py
+      md5: b22dd17d8b31cba24f11eb50fb6a71c5
+      size: 2551
+    params:
+      params.yaml:
+        estimators.LogisticRegression.params.l1_ratio: 0.89
+    outs:
+    - path: report/params.json
+      md5: 390c289f65bdedce7217d069742bedc9
+      size: 26
+    - path: report/scores.json
+      md5: 104e3183a7073dbd3fd3a949f21be94e
+      size: 30
+    - path: saved_models/models.joblib
+      md5: f5b72255f1b463424bb89895fae73413
+      size: 1959

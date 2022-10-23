@@ -26,5 +26,10 @@ stages:
     - src/train_and_evaluate.py
     params:
     - estimators.LogisticRegression.params.l1_ratio
+    metrics:
+    - report/scores.json:
+        cache: false
+    - report/params.json:
+        cache: false
     outs:
     - saved_models/models.joblib
