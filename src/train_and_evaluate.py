@@ -62,7 +62,7 @@ def train_and_evaluate(config_path):
 
     scores_file = config["reports"]["scores"]
     params_file = config["reports"]["params"]
-
+#############################################################################
     with open(scores_file,"w")  as f:
         scores = {
             "accuracy" :accuracy

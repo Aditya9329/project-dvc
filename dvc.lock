@@ -46,14 +46,14 @@ stages:
       size: 2551
     params:
       params.yaml:
-        estimators.LogisticRegression.params.l1_ratio: 0.89
+        estimators.LogisticRegression.params.l1_ratio: 0.9
     outs:
     - path: report/params.json
-      md5: 390c289f65bdedce7217d069742bedc9
-      size: 26
+      md5: d4c3cc02ff3d27bb5c469d0b89351b16
+      size: 25
     - path: report/scores.json
       md5: 104e3183a7073dbd3fd3a949f21be94e
       size: 30
     - path: saved_models/models.joblib
-      md5: f5b72255f1b463424bb89895fae73413
+      md5: aa46c373a87b6710c71e5eb246336c3f
       size: 1959

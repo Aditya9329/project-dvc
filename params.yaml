@@ -19,7 +19,9 @@ split_data:
 estimators:
   LogisticRegression:
     params:
-      l1_ratio: 0.89
+      # l1_ratio: 0.89
+      l1_ratio: 0.9
+
 
 
 
