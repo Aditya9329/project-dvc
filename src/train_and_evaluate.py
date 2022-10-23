@@ -31,19 +31,26 @@ def train_and_evaluate(config_path):
     # alpha          = config["estimators"]["LogisticRegression"]["params"]
     l1_ratio       = config["estimators"]["LogisticRegression"]["params"]["l1_ratio"]
 
-
+    print("till here everything is fine")
     target         = [config["base"]["target_col"]]
+    # print(target)
 
     train   = pd.read_csv(train_data_path,sep = ";")
+    # print(train)
     test    = pd.read_csv(test_data_path,sep=";")
+    print(test)
 
     train_y = train[target] 
+    print(train_y)
+
     test_y  = test[target]
-    train_x = train_x.drop(target,axis=1)
-    test_x  = test_x.drop(target,axis = 1)
+    print(test_y)
+    train_x = train.drop(target,axis=1)
+    # print(train_x)
+    test_x  = test.drop(target,axis = 1)
 
 
-    lr = LogisticRegresseion(l1_ratio = l1_ratio,
+    lr = LogisticRegression(l1_ratio = l1_ratio,
     random_state = random_state)
 
     lr.fit(train_x,train_y) 
@@ -54,7 +61,7 @@ def train_and_evaluate(config_path):
 
     print("Accuracy_score = ",accuracy)
 
-    os.mkdir(model_dir,exists=True)
+    os.makedirs(model_dir,exist_ok=True)
     model_path = os.path.join(model_dir,"model.joblib")
     joblib.dump(lr,model_path)
     
