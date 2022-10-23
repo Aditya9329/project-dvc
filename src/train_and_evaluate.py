@@ -38,13 +38,13 @@ def train_and_evaluate(config_path):
     train   = pd.read_csv(train_data_path,sep = ";")
     # print(train)
     test    = pd.read_csv(test_data_path,sep=";")
-    print(test)
+    # print(test)
 
     train_y = train[target] 
-    print(train_y)
+    # print(train_y)
 
     test_y  = test[target]
-    print(test_y)
+    # print(test_y)
     train_x = train.drop(target,axis=1)
     # print(train_x)
     test_x  = test.drop(target,axis = 1)
@@ -62,7 +62,7 @@ def train_and_evaluate(config_path):
     print("Accuracy_score = ",accuracy)
 
     os.makedirs(model_dir,exist_ok=True)
-    model_path = os.path.join(model_dir,"model.joblib")
+    model_path = os.path.join(model_dir,"models.joblib")
     joblib.dump(lr,model_path)
     
 

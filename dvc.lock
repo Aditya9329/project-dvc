@@ -7,11 +7,11 @@ stages:
       md5: 2daeecee174368f8a33b82c8cccae3a5
       size: 84199
     - path: src/get_data.py
-      md5: 0eb96caed99bb9efdc717be30c4badce
-      size: 733
+      md5: 68280ef9caf2bd8b4e4dd77ddad5d842
+      size: 729
     - path: src/load_data.py
-      md5: 1dec69abedcefedd906f152ae1920f9c
-      size: 710
+      md5: 6012828c22dda06c209dd35f576640f1
+      size: 712
     outs:
     - path: data/raw/winequality-red.csv
       md5: d80d17ed18f3c3a15de3253d204c5a1b
@@ -23,11 +23,11 @@ stages:
       md5: d80d17ed18f3c3a15de3253d204c5a1b
       size: 93599
     - path: src/split_data.py
-      md5: a61981ccfa7e17afd64c0a5310ac45b0
-      size: 1102
+      md5: 3f918bf4b45f44527edabb5ae22576dc
+      size: 1110
     outs:
     - path: data/processed/test_winequality-red.csv
-      md5: b31a4073fa82bc444fd5683cb5cf7e76
+      md5: ed8953e5126e27b36cce9517c30b0790
       size: 18832
     - path: data/processed/train_winequality-red.csv
       md5: 0805ce60268e424c0993dce54e4d1534
