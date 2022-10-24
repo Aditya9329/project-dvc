@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock title %}
+<!-- display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: red;
+    flex-direction: column;
+    flex-wrap: wrap; -->
+
+
+{% block content %}
+<br>
+<div class="container" style="display:flex">
+    <form method="POST" action="" style="width:900px;display: flex;
+height: 500px;flex-direction: column;flex-wrap: wrap;">
+
+
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="fixed_acidity" placeholder="fixed acidity"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">fixed acidity</label>
+        </div>
+
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="volatile_acidity" placeholder="volatile acidity"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">volatile acidity</label>
+        </div>
+
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="citric_acid" placeholder="citric acid"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">citric acid</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="residual_sugar" placeholder="residual sugar"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">residual sugar</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="chlorides" placeholder="chlorides" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">chlorides</label>
+        </div>
+
+        <br>
+
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="free_sulphur_dioxide" placeholder="free sulphur dioxide"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">free sulphur dioxide</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="total_sulphur_dioxide" placeholder="total sulphur dioxide"
+                id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">total sulphur dioxide</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="density" placeholder="density" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">density</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="pH" placeholder="pH" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">pH</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="sulphates" placeholder="sulphates" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">sulphates</label>
+        </div>
+        <br>
+        <div class="form-floating" style="width: 350px;">
+            <textarea class="form-control" name="alchol" placeholder="alchol" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">alchol</label>
+        </div>
+        <br>
+        <input type="submit" value="predict" style="width:150px;border-radius:3px;">
+    </form>
+
+
+    <div class="output">
+        <textarea  id="" cols="30" rows="5"></textarea>{{ response }}
+    </div>
+
+</div>
+{% endblock content %}
