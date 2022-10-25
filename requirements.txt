@@ -1,6 +1,4 @@
-#LOCAL PACKAGE INSTALL
-    # .E
-#This is for third party
+
 dvc
 dvc[gdrive]
 sklearn
