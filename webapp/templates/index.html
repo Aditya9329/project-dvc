@@ -14,10 +14,10 @@
 {% block content %}
 <br>
 <div class="container" style="display:flex">
-    <form method="POST" action="" style="width:900px;display: flex;
+    <form method="POST" style="width:900px;display: flex;
 height: 500px;flex-direction: column;flex-wrap: wrap;">
 
-
+           
         <div class="form-floating" style="width: 350px;">
             <textarea class="form-control" name="fixed_acidity" placeholder="fixed acidity"
                 id="floatingTextarea"></textarea>
@@ -88,7 +88,7 @@ height: 500px;flex-direction: column;flex-wrap: wrap;">
 
 
     <div class="output">
-        <textarea  id="" cols="30" rows="5"></textarea>{{ response }}
+        <textarea  id="" cols="30" rows="5">{{ response }}</textarea>
     </div>
 
 </div>
