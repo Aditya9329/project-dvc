@@ -5,5 +5,5 @@ sklearn
 pandas
 pytest
 tox
-flake
+flake8
 flask
