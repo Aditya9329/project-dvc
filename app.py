@@ -54,7 +54,7 @@ def index():
                 response = predict(data)
                 return render_template("index.html",response=response)
             elif request.json:
-                response = api_respnse(request)
+                response = api_response(request)
                 return jsonify(response)
         except Exception as e:
             print(e)
